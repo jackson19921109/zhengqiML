@@ -39,7 +39,7 @@ from scipy.stats import pearsonr
 # SelectKBest(lambda X, Y: array(map(lambda x:pearsonr(x, Y), X.T)).T, k=2).fit_transform(iris.data, iris.target)
 
 
-x_train = SelectKBest(lambda X, Y: np.array(list(map(lambda x: pearsonr(x, Y), X.T))).T[0], k=30).fit(X_train,
+x_train = SelectKBest(lambda X, Y: np.array(list(map(lambda x: pearsonr(x, Y), X.T))).T[0], k=25).fit(X_train,
                                                                                                       y_train).get_support(
     indices=True)
 
