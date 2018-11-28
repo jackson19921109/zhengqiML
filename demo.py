@@ -26,10 +26,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 print(len(X_train))
 print(len(X_test))
 
-pca = PCA(n_components=0.95)
+pca = PCA(n_components=0.97)
 pca.fit(X)
 X_pca = pca.transform(X)
 X1_pca = pca.transform(zhengqi_test)
+
+print(X_pca.shape)
 
 X_train, X_test, Y_train, Y_test = train_test_split(X_pca, y, test_size=0.3, random_state=0)
 
